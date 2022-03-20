@@ -32,22 +32,38 @@ body{
 }
 
 /* 2b */
-.container2b{
-
-}
-.container2b__row{
-
-}
-.card{
-    height: 200px;
-    width: 100%;
-    max-width: 300px;
-}
-.card > img{
-    height: 100%;
+.container2b {
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px 30px);
+    grid-gap: 30px;
+  }
+.container2b img{
     width: auto;
+    height: 100%;
 }
-.card > p{
+.container2b > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2c */
+
+.container2c{
+    display: grid;
+    padding-top: 10px;
+    gap: 10px;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: minmax(25px, auto);
+}
+
+.container2c > label,
+.container2c > input {
+    place-self: center;
+}
+
+.container2c > input{
     width: 100%;
-    text-align: center;
 }
