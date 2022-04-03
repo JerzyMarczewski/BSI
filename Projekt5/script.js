@@ -4,6 +4,7 @@ const dot = document.querySelector("#dot");
 const clear = document.querySelector("#clear");
 const changeNegative = document.querySelector("#changeNegative");
 const operators = document.querySelectorAll(".operator");
+const equals = document.querySelector("#equals")
 
 let a = 0;
 let b = 0
@@ -20,7 +21,7 @@ window.onload = () => {
     dot.addEventListener("click", handleDotClick)
     changeNegative.addEventListener("click", handleChangeNegative)
     clear.addEventListener("click", handleClearClick)
-    screenValue.addEventListener("change", handleScreenValueChange)
+    equals.addEventListener("click", handleEqualsClick)
 }
 
 
@@ -29,11 +30,13 @@ window.onload = () => {
 
 
 function handleNumberClick(e){
-    if(screenValue.value.length >= 12) return;
-    if(screenValue.value === "0")
-        screenValue.value = e.target.innerText
+    if(screenValue.innerText.length >= 12) return;
+    if(screenValue.innerText === "0")
+        screenValue.innerText = e.target.innerText
     else
-        screenValue.value += e.target.innerText
+        screenValue.innerText += e.target.innerText
+
+    updateValues()
 }
 
 function handleDelClick(e){
@@ -42,6 +45,8 @@ function handleDelClick(e){
         screenValue.innerText = 0;
     else 
         screenValue.innerText = screenValue.innerText.slice(0, -1)
+
+    updateValues()
 }
 
 function handleChangeNegative(e){
@@ -51,6 +56,8 @@ function handleChangeNegative(e){
         screenValue.innerText = screenValue.innerText.substring(1)
     else
         screenValue.innerText = '-' + screenValue.innerText
+
+    updateValues()
 }
 
 function handleDotClick(e){
@@ -60,6 +67,9 @@ function handleDotClick(e){
 
 function handleOperatorClick(e){
     changeOrangeOperator(e.target.id)
+    a = b
+    b = 0
+    screenValue.innerText = 0
 }
 
 function removeOrangeFromOperators(){
@@ -77,9 +87,60 @@ function changeOrangeOperator(operatorID){
 }
 function handleClearClick(e){
     removeOrangeFromOperators();
+    screenValue.innerText = 0;
     a = 0;
     b = 0;
 }
 function handleScreenValueChange(e){
-    
+    alert()
+}
+
+function updateValues(){
+    b = parseFloat(screenValue.innerText)
+    console.log('a = ' + a)
+    console.log('b = ' + b)
+}
+
+function handleEqualsClick(){
+    chosenOperator = null
+    for(let i=0; i< operators.length;i++){
+        if(operators[i].classList.contains("orange"))
+            chosenOperator = operators[i]
+    }
+    if(chosenOperator === null)
+        return
+
+    removeOrangeFromOperators()
+
+    switch(chosenOperator.id){
+        case "multiplication":
+            b = a*b
+            a = 0
+            screenValue.innerText = b
+            break
+        
+        case "division":
+            b = a/b
+            a = 0
+            screenValue.innerText = b
+            break
+            break
+        
+        case "subtraction":
+            b = a-b
+            a = 0
+            screenValue.innerText = b
+            break
+            break
+        
+        case "addition":
+            b = a+b
+            a = 0
+            screenValue.innerText = b
+            break
+            break
+        default:
+            break
+
+    }
 }
