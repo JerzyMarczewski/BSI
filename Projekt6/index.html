@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form>            
+        <form id="form">            
             <label for="imie">Imie:</label>
             <input type="text" name="imie" id="imie">
 
@@ -30,19 +30,42 @@
             <input type="text" name="miasto" id="miasto">
     
             <label for="wojewodztwo">Województwo:</label>
-            <input type="text" name="wojewodztwo">
+            <select type="text" name="wojewodztwo" id="wojewodztwo" required>
+                <option value="" selected disabled>wybierz Województwo</option>
+                <option value="dolnośląskie">dolnośląskie</option>
+                <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+                <option value="lubelskie">lubelskie</option>
+                <option value="lubuskie">lubuskie</option>
+                <option value="łódzkie">łódzkie</option>
+                <option value="małopolskie">małopolskie</option>
+                <option value="mazowieckie">mazowieckie</option>
+                <option value="opolskie">opolskie</option>
+                <option value="podkarpackie">podkarpackie</option>
+                <option value="podlaskie">podlaskie</option>
+                <option value="pomorskie">pomorskie</option>
+                <option value="śląskie">śląskie</option>
+                <option value="świętokrzyskie">świętokrzyskie</option>
+                <option value="warmińsko-mazurskie">warmińsko-mazurskie/option>
+                <option value="wielkopolskie">wielkopolskie</option>
+                <option value="zachodniopomorskie">zachodniopomorskie</option>
+            </select>
     
             <label for="narodziny">Data urodzin:</label>
-            <input type="text" name="narodziny">
+            <input type="text" name="narodziny" placeholder="DD-MM-YYYY" id="narodziny">
     
             <label for="prawo-jazdy">Prawo jazdy:</label>
             <input type="checkbox" name="prawo-jazdy">
     
             <label for="płeć">Płeć:</label>
-            <input type="text" name="płeć">
+            <select type="text" name="płeć" required>
+                <option value="" selected disabled>wybierz płeć</option>
+                <option value="Mężczyzna">Mężczyzna</option>
+                <option value="Kobieta">Kobieta</option>
+                <option value="Inne">Inne</option>
+            </select>
     
             <label for="telefon">Telefon:</label>
-            <input type="text" name="telefon">
+            <input type="text" name="telefon" id="telefon">
     
             <label for="uwagi">Uwagi:</label>
             <textarea name="uwagi" style="height: 150px;"></textarea>
