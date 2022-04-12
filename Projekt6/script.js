@@ -6,10 +6,10 @@ const submitButton = document.querySelector("#submit")
 
 const regex = new RegExp('[1-9]+');
 const regexNumber = new RegExp(/([1-9][0-9]{0,5})/)
-const regexName = new RegExp(/^[A-Z][a-zęóąśłżźćń]{1,25}$/)
-const regexNameWithSpace = new RegExp(/^[A-Z][a-zęóąśłżźćń ]{1,25}$/)
+const regexName = new RegExp(/^[A-Z][a-zęóąśłżźćń\-]{1,25}$/)
+const regexNameWithSpace = new RegExp(/^[A-Z][a-zęóąśłżźćń \-]{1,25}$/)
 const regexDate = new RegExp(/^(0[1-9]|[1-2][0-9]|3[01])\-(0[1-9]|1[0-2])\-(19[0-9][0-9]|20[0-1][0-9]|202[0-2])$/)
-const regexStreet = new RegExp(/^([A-Z][\w\s.]{1,25}[0-9]{0,5})$/)
+const regexStreet = new RegExp(/^([\w\. ]{1,25}[0-9]{0,5})$/)
 const regexTel = new RegExp(/[0-9]{9}/)
 
 window.onload = () => {
