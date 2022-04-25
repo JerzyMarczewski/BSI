@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+/* 2c */
+
+.container2c{
+    display: grid;
+    padding-top: 10px;
+    gap: 10px;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: minmax(25px, auto);
+}
+
+.container2c > label,
+.container2c > input {
+    place-self: center;
+}
+
+.container2c > input{
+    width: 100%;
+}

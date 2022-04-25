@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container > form{
+    background: lightgray;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 25px;
+}
+.container > form > label,
+.container > form > input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+}
+.container > form > input[type=text]{
+    border: 1px solid black;
+}
+.container > form > input[type=text].red{
+    border: 1px solid red;
+}
+.container > form > input[type=text].green{
+    border: 1px solid green;
+}
+input {
+    outline: none;
+}

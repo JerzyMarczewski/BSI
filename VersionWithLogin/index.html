@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(blue,lightblue);
+            min-height: 100vh;
+        }
+        .formularz{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .formularz > * {
+            margin: 5px;
+        }
+        label{
+            color: white;
+            font-weight: bold;
+        }
+        label,input{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <form action="sprawdz.php" class="formularz">
+        <label for="login">Login</label>
+        <input type="text" name="login" id="login">
+        <label for="haslo">Hasło</label>
+        <input type="password" name="haslo" id="haslo">
+        <input type="submit" value="Loguj">
+    </form>
+</body>
+</html>

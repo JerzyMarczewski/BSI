@@ -7,11 +7,15 @@
     <title></title>
 </head>
 <body>
+<?php
+  require("../../skrypt.php");
+  require("../../guzik.php");
+?>
     <div style="width:100%;text-align:center">
-        <button><a href="./2a/index.html">2a</a></button>
-        <button><a href="./2b/index.html">2b</a></button>
-        <button><a href="./2c/index.html">2c</a></button>
+        <button><a href="./2a/index.php">2a</a></button>
+        <button><a href="./2b/index.php">2b</a></button>
+        <button><a href="./2c/index.php">2c</a></button>
     </div>
     
 </body>
-</html>
+</html> 
