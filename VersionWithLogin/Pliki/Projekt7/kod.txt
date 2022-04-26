@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
 <?php
         require("../../skrypt.php");
         require("../../guzik.php");
@@ -22,6 +15,4 @@
         echo "<b>Płeć: </b>" . $_GET["plec"] . "<br/>";
         echo "<b>Numer Telefonu: </b>" . $_GET["telefon"] . "<br/>";
         echo "<b>Uwagi: </b>" . $_GET["uwagi"] . "<br/>";
-    ?>
-</body>
-</html>
+?>

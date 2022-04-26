@@ -31,16 +31,41 @@
         <input type="text" name="miasto">
 
         <label for="wojewodztwo">Województwo:</label>
-        <input type="text" name="wojewodztwo">
+            <select type="text" name="wojewodztwo" id="wojewodztwo">
+                <!-- <option value="" selected disabled>wybierz Województwo</option> -->
+                <option value="dolnośląskie" selected>dolnośląskie</option>
+                <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+                <option value="lubelskie">lubelskie</option>
+                <option value="lubuskie">lubuskie</option>
+                <option value="łódzkie">łódzkie</option>
+                <option value="małopolskie">małopolskie</option>
+                <option value="mazowieckie">mazowieckie</option>
+                <option value="opolskie">opolskie</option>
+                <option value="podkarpackie">podkarpackie</option>
+                <option value="podlaskie">podlaskie</option>
+                <option value="pomorskie">pomorskie</option>
+                <option value="śląskie">śląskie</option>
+                <option value="świętokrzyskie">świętokrzyskie</option>
+                <option value="warmińsko-mazurskie">warmińsko-mazurskie/option>
+                <option value="wielkopolskie">wielkopolskie</option>
+                <option value="zachodniopomorskie">zachodniopomorskie</option>
+            </select>
 
         <label for="narodziny">Data urodzin:</label>
         <input type="date" name="narodziny">
 
         <label for="prawo-jazdy">Prawo jazdy:</label>
-        <input type="text" name="prawo-jazdy">
+            <select type="text" name="prawo-jazdy">
+                <option value="tak">tak</option>
+                <option value="nie" selected>nie</option>
+            </select>
 
         <label for="plec">Płeć:</label>
-        <input type="text" name="plec">
+            <select type="text" name="plec">
+                <option value="Mężczyzna">Mężczyzna</option>
+                <option value="Kobieta">Kobieta</option>
+                <option value="Inne" selected>Inne</option>
+            </select>
 
         <label for="telefon">Telefon:</label>
         <input type="tel" name="telefon">
